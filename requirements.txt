@@ -1,0 +1,15 @@
+# Full environment: benchmark + the agent's QEM / QEC / FTQC / multi-framework domains
+-r requirements-bench.txt
+qiskit-aer==0.18.2
+scipy==1.17.1
+mitiq==1.1.0          # GPL-3.0: used only by the agent's QEM examples, not by the benchmark
+ply==3.11
+deltakit==0.10.2
+stim==1.16.0
+PyMatching==2.4.0
+ldpc==2.4.1
+qsharp==1.31.0
+qualtran==0.7.0
+pennylane==0.45.1
+amazon-braket-sdk==1.127.7
+python-dateutil<3     # botocore breaks with dateutil 3; do not add pytket-qiskit (it pulls dateutil 3)

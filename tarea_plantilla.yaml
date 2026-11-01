@@ -1,0 +1,19 @@
+# Plantilla de tarea estructurada. Copiala a tareas/<nombre>.yaml, llenala y corre:
+#   .venv/bin/python agent.py tareas/<nombre>.yaml
+# Los campos vacios o borrados quedan a criterio del agente.
+dominio: qec            # circuits | qem | qec | ftqc | multiframework (puede ser una lista)
+objetivo: >
+  Medir la tasa de error logico de un codigo de superficie rotado en un experimento de memoria Z.
+entradas:
+  distancias: [3, 5, 7]
+  ruido: SD6, p = 0.001
+criterio_de_exito: >
+  La tasa de error logico baja al subir la distancia; reportar Lambda entre distancias.
+restricciones:
+  qubits_max:
+  compuertas_permitidas:   # p. ej. [cx, rz, sx, x]
+  conectividad:            # p. ej. lineal, heavy-hex, todos-con-todos
+  framework: deltakit + stim + pymatching
+optimizar:               # metrica a minimizar si aplica: cx, profundidad, qubits, conteo T
+entregable: >
+  Script verificado y tabla con distancia, qubits fisicos, LEP y Lambda.

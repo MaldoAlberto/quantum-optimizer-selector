@@ -1,0 +1,6 @@
+# Benchmark, optimizer skill and MCP server (enough to contribute circuits, pipelines, selectors)
+qiskit==2.6.1
+pytket==2.18.5
+pyzx==0.10.8
+numpy==2.2.6
+mcp==2.3.0
